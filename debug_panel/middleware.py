@@ -1,4 +1,3 @@
-B
 """
 Debug Panel middleware
 """
