@@ -1,3 +1,4 @@
+B
 """
 Debug Panel middleware
 """
@@ -42,7 +43,7 @@ class DebugPanelMiddleware(debug_toolbar.middleware.DebugToolbarMiddleware):
         """
 
         try:
-            res = resolve(request.path, urlconf=debug_panel.urls)
+            res = resolve(request.path_info, urlconf=debug_panel.urls)
         except Resolver404:
             return super(DebugPanelMiddleware, self).process_request(request)
 
